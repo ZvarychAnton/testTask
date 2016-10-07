@@ -33,12 +33,9 @@ angular.module("testAppModule").controller("testAppCtrl",[ "$scope","userService
   }
 
   $scope.removeCustomer = function(user){
-    for(var i = 0; i < $scope.list.length; i++) {
-      if ($scope.list[i].id == user.id) {
-        $scope.list.splice(i,1);
-      }
-    }
-  userService.postUsersData($scope.list);
+    var index = $scope.list.indexOf(user);
+    $scope.list.splice(index, 1);
+    userService.postUsersData($scope.list);
  }
 
  $scope.clearFields = function(){
