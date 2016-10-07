@@ -33,8 +33,21 @@ h3 {
   table-layout: fixed;
   width: 99%;
 
+  tr:first-child:hover {
+    background-color: aliceblue;
+  }
+  tr:first-child {
+    background-color: aliceblue;
+  }
   th {
     text-transform: capitalize;
+
+    a{
+      cursor: pointer;
+    }
+    a:hover{
+      text-decoration: none;
+    }
   }
 
   td {
@@ -50,6 +63,7 @@ h3 {
   th:last-child{
     width: 6%;
   }
+
 }
 #search{
   display: inline;
