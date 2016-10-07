@@ -1,11 +1,18 @@
-angular.module("testAppModule").controller("testAppCtrl",[ "$scope","userService" , function($scope,userService){
+angular.module("testAppModule").controller("testAppCtrl",[ 
+  "$scope",
+  "userService", 
+  "$injector", 
+  function($scope,
+           userService,
+           $injector){
+    
   $scope.formData = {};
   $scope.editMode = false;
+  $scope.idCounter = $injector.get("generateID").getUUID();
 
   // load user list
   userService.getUsersList().then(function(result){
     $scope.list = result;
-    $scope.idCounter = $scope.list[$scope.list.length - 1].id + 1; // assign id
   });
 
   $scope.addNewCustomer = function(formData){

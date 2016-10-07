@@ -20,11 +20,12 @@ gulp.task('compress', function() {
         'assets/libraries/*.js',
         'app.js',
         'assets/js/userService.js',
+        'assets/js/UUID-generator/getIDFactory.js',
         'assets/js/userCtrl.js',
         'assets/js/user-list/usersListDirective.js'
     ])
         .pipe(concat('app.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('build'));
 });
 
