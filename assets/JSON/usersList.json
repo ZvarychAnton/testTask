@@ -1,13 +1,11 @@
 [
     {
-        "id": "0",
-        "name": "Anton",
-        "email": "zcarych.anton@gmail.com",
-        "telephone": "0503962683",
-        "address": "---",
-        "street": "---",
-        "city": "Kherson",
-        "state": "---",
-        "zip": "73000"
+        "name": "User",
+        "telephone": "---------",
+        "address": "---------",
+        "street": "---------",
+        "state": "---------",
+        "zip": "---------",
+        "id": "46977808-c85f-469b-9b19-d274a051cf8a"
     }
 ]
