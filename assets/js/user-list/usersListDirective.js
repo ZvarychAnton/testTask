@@ -8,8 +8,13 @@ angular.module("testAppModule").directive('userList', function () {
             $scope.reverse = false;
 
             $scope.sortBy = function(propertyName) {
-                $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
-                $scope.propertyName = propertyName;
+                if(propertyName !='N' && propertyName !='remove' && propertyName !='edit') {
+                    $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+                    $scope.propertyName = propertyName;
+                }
+                else{
+                    return false;
+                }
             };
             $scope.resetSorting = function(){
                 $scope.propertyName = null;
