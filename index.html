@@ -8,35 +8,7 @@
 <body ng-controller="testAppCtrl">
   <div class="left-side">
     <h3>User information</h3>
-    <form class="main-form" name="addCustomerForm" ng-submit="addNewCustomer(formData);">
-      <label for="name">Name</label>
-      <input class="form-control" ng-model="formData.name" id="name" type="text"/>
-
-      <label for="email">Email</label>
-      <input class="form-control" ng-model="formData.email" id="email" type="email"/>
-
-      <label for="telephone">Phone</label>
-      <input class="form-control" ng-model="formData.telephone" id="telephone" type="text"/>
-
-      <label for="address">Address</label>
-      <input class="form-control" ng-model="formData.address" id="address" type="text"/>
-
-      <label for="street">Street</label>
-      <input class="form-control" ng-model="formData.street" id="street" type="text"/>
-
-      <label for="city">City</label>
-      <input class="form-control" ng-model="formData.city" id="city" type="text"/>
-
-      <label for="state">State</label>
-      <input class="form-control" ng-model="formData.state" id="state" type="text"/>
-
-      <label for="zip">Zip</label>
-      <input class="form-control" ng-model="formData.zip" id="zip" type="text"/>
-
-      <input type="submit" class="btn btn-success" value="Add" ng-if="!editMode"/>
-      <input type="button" class="btn btn-success" value="Update" ng-if="editMode" ng-click="updateCustomer(formData)"/>
-      <input type="button" class="btn btn-danger"  value="Cancel" ng-click="clearFields()" />
-    </form>
+    <user-form></user-form>
 </div>
 <div class="right-side">
   <h3>List with users</h3>

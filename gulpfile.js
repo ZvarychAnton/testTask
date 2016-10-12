@@ -22,10 +22,11 @@ gulp.task('compress', function() {
         'assets/js/userService.js',
         'assets/js/UUID-generator/getIDFactory.js',
         'assets/js/userCtrl.js',
+        'assets/js/user-form/userFormDirective.js',
         'assets/js/user-list/usersListDirective.js'
     ])
         .pipe(concat('app.min.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('build'));
 });
 

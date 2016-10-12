@@ -1,15 +1,19 @@
 .main-form {
-  width: 250px;
+  width: 290px;
 
-  input[type=text],input[type=email]{
+  .form-group {
+    margin-bottom: 30px;
+  }
+  input[type=text],input[type=email],input[type=number]{
     margin-bottom: 10px;
     float: right;
     width: 75%
   }
 
   label {
-    height: 40px;
-    width: 50px;
+    display: inline;
+    text-transform: capitalize;
+    font-size: 12px;
   }
 
   .btn{
@@ -96,4 +100,10 @@ h3 {
 }
 .sortorder.reverse:after {
   content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}
+.required-field{
+  color:red;
+}
+.hidden{
+  display:none;
 }

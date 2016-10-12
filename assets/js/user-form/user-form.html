@@ -1,0 +1,16 @@
+<form class="main-form" name="addCustomerForm" ng-submit="addNewCustomer(formData,addCustomerForm);" novalidate>
+    <div ng-repeat="field in formFields" class="form-group" ng-class="{ 'has-error' : addCustomerForm[field.name].$invalid && !addCustomerForm[field.name].$pristine }">
+        <label for="{{field.name}}">{{field.name}}: <span ng-class="field.required ? 'required-field' : 'hidden'">*</span></label>
+        <input class="form-control"
+               ng-model="formData[field.name]"
+               id="{{field.name}}"
+               type="{{field.type}}"
+               name = "{{field.name}}"
+               ng-required="field.required"
+               ng-minlength="field.minlength"
+               ng-maxlength="field.maxlength"/>
+    </div>
+    <input type="submit" class="btn btn-success" value="Add" ng-if="!editMode" ng-disabled="addCustomerForm.$invalid"/>
+    <input type="button" class="btn btn-success" value="Update" ng-if="editMode" ng-click="updateCustomer(formData,addCustomerForm)" ng-disabled="addCustomerForm.$invalid"/>
+    <input type="button" class="btn btn-danger"  value="Cancel" ng-click="clearFields(addCustomerForm)" />
+</form>

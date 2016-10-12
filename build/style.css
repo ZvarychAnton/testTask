@@ -1,12 +1,15 @@
 .main-form {
-  width: 250px; }
-  .main-form input[type=text], .main-form input[type=email] {
+  width: 290px; }
+  .main-form .form-group {
+    margin-bottom: 30px; }
+  .main-form input[type=text], .main-form input[type=email], .main-form input[type=number] {
     margin-bottom: 10px;
     float: right;
     width: 75%; }
   .main-form label {
-    height: 40px;
-    width: 50px; }
+    display: inline;
+    text-transform: capitalize;
+    font-size: 12px; }
   .main-form .btn {
     margin: 0 10px;
     float: right; }
@@ -26,17 +29,35 @@ h3 {
 .table {
   table-layout: fixed;
   width: 99%; }
+  .table tr:first-child:hover {
+    background-color: aliceblue; }
+  .table tr:first-child {
+    background-color: aliceblue; }
   .table th {
     text-transform: capitalize; }
+    .table th a {
+      cursor: pointer; }
+    .table th a:hover {
+      text-decoration: none; }
   .table td {
     padding: 2px !important;
     word-wrap: break-word; }
   .table th:first-child {
     width: 3%; }
+    .table th:first-child a {
+      cursor: default; }
   .table th:nth-child(3) {
     width: 15%; }
+  .table th:nth-child(4) {
+    width: 12%; }
+  .table th:nth-child(5) {
+    width: 11%; }
+  .table th:nth-child(10) a {
+    cursor: default; }
   .table th:last-child {
     width: 6%; }
+    .table th:last-child a {
+      cursor: default; }
 
 #search {
   display: inline;
@@ -46,3 +67,15 @@ h3 {
 .search-block {
   float: right;
   margin-right: 1%; }
+
+.sortorder:after {
+  content: '\25b2'; }
+
+.sortorder.reverse:after {
+  content: '\25bc'; }
+
+.required-field {
+  color: red; }
+
+.hidden {
+  display: none; }

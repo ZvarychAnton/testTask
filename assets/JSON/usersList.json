@@ -1,11 +1,9 @@
 [
     {
-        "name": "User",
-        "telephone": "---------",
-        "address": "---------",
-        "street": "---------",
-        "state": "---------",
-        "zip": "---------",
-        "id": "46977808-c85f-469b-9b19-d274a051cf8a"
+        "name": "Anton",
+        "email": "email@com",
+        "telephone": 999999999,
+        "city": "Kherson",
+        "id": "0eecea74-1b3e-4382-8eae-0be505244944"
     }
 ]
